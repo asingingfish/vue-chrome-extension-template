@@ -18,6 +18,8 @@
   "scripts": {
     "lint": "eslint --ext .js,.vue src",
     "dev": "webpack --config ./core/webpack.dev.js --hide-modules",
+    "dist": "webpack --config ./core/webpack.dist.js --hide-modules",
+    "pack": "webpack --config ./core/webpack.pack.js --hide-modules",
     "build": "webpack --config ./core/webpack.prod.js -p --progress  --hide-modules --colors"
   },
   "devDependencies": {
