@@ -7,14 +7,14 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 let resolve = dir => path.join(__dirname, '..', 'src', dir)
 module.exports = {
   entry: {
-    tab: resolve('./tab'),
-    popup: resolve('./popup'),
-    options: resolve('./options'),
-    content: resolve('./content'), 
-    devtools: resolve('./devtools'),
-    background: resolve('./backend'),
-    panel: resolve('./devtools/panel'),
-    inject: resolve('./content/inject'),
+    tab: resolve('./view/tab'),
+    popup: resolve('./view/popup'),
+    options: resolve('./view/options'),
+    content: resolve('./view/content'),
+    devtools: resolve('./view/devtools'),
+    background: resolve('./view/background'),
+    panel: resolve('./view/devtools/panel'),
+    inject: resolve('./view/content/inject'),
   },
   output: {
     path: path.join(__dirname, '..', 'build'),
@@ -32,15 +32,6 @@ module.exports = {
   },
   module: {
     rules: [
-      // {
-      //   test: /\.(js|vue)$/,
-      //   loader: 'eslint-loader',
-      //   enforce: 'pre',
-      //   include: [path.join(__dirname, '..', 'src'), path.join(__dirname, '..', 'test')],
-      //   options: {
-      //     formatter: require('eslint-friendly-formatter')
-      //   }
-      // },
       {
         test: /\.vue$/,
         loader: 'vue-loader',
